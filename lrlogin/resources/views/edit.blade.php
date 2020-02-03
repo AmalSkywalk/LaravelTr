@@ -1,10 +1,9 @@
 @extends('layout')
-   
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Edit User</h2>
+            <div class="heading">
+                <h2 align="center">Edit User</h2>
             </div>
             
         </div>
@@ -29,25 +28,26 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Name:</strong>
-                <input type="text" name="name" class="form-control" placeholder="Name">
+            
+                <input type="text" name="name" class="form-control" value="{{$user->name}}">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>email:</strong>
-                <input class="form-control" type="email" name="email" placeholder="email">
+                <strong>Email:</strong>
+                <input class="form-control" type="email" name="email" value="{{$user->email}}">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>password:</strong>
-                <input class="form-control" type="password" name="password" placeholder="password">
+                <strong>Password:</strong>
+                <input class="form-control" type="password" name="password" value="{{$user->password}}">
             </div>
         </div>
-        <div class="pull-left"style="float: left;margin-left:10%;">
+        <div class="back lftbtn">
                 <a class="btn btn-primary" href="{{ route('show') }}"> Back</a>
             </div>
-        <div class=""style="float:right; margin-left:20%; ">
+        <div class="submit rtnbtn">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
         </div>

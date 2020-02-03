@@ -1,7 +1,7 @@
 @extends('layout')
-
 @section('content')
-		<h3 align="center">Login Forum</h3><br>
+
+		<h3 align="center" class="heading">Login Forum</h3><br>
 
 		@if(isset(Auth::user()->email))
 			<script>
@@ -31,15 +31,15 @@
 			{{ csrf_field() }}
 			<div class="form-group">
 				<label><b>Enter Email</label>
-				<input type="email" name="email" class="form-control"/>
+				<input type="email" name="email" class="form-control" placeholder="example@gmail.com" />
 			</div>
 			<div class="form-group">
 				<label>Enter Password</label>
-				<input type="password" name="password" class="form-control"/>
+				<input type="password" name="password" class="form-control" placeholder="*************" />
 			</div>
-			<div class="form-group">
+			<div class="form-group col-sm-2 ">
 				<input type="submit" name="login" class="btn btn-primary" value="Login" />
 			</div>
 		</form>
-	</div>
+	
 @endsection

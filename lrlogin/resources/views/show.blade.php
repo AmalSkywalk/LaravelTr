@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             
-                <h2 align="center"> List of Users</h2>
+                <h2 align="center" class="heading"> List of Users</h2>
 
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
@@ -37,15 +37,15 @@
                     @csrf
                     
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger ">Delete</button>
                 </form>
             </td>
         </tr> 
      @endforeach
 
    </table>
-   <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('successlogin') }}"> Back</a>
+   <div class="lftbtn" >
+                <a class="btn btn-primary " href="{{ route('successlogin') }}"> Back</a>
             </div>  
     </div>
 @endsection

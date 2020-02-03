@@ -63,16 +63,16 @@ class MainController extends Controller
   
         User::create($request->all());
    
-        return redirect()->route('successlogin')
+        return redirect()->route('show')
                         ->with('success','User created successfully.');    
 
 	}
 	public function show()
     {
-        $users  =  User::latest()->paginate(5);
+        $users  =  User::latest()->paginate(10);
             // dd($product);
                 return view('show',compact('users'))
-                ->with('i',(request()->input('page',1)-1)*5);
+                ->with('i',(request()->input('page',1)-1)*10);
     }
 
      public function edit(User $user, $id = null)

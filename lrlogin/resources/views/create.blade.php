@@ -1,14 +1,10 @@
 @extends('layout')
-  
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
         
             <h2 align="center">Add New User</h2>
         
-        <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('successlogin') }}"> Back</a>
-        </div>
     </div>
 </div>
    
@@ -35,17 +31,20 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>email:</strong>
+                <strong>Email:</strong>
                 <input class="form-control" type="email" name="email" placeholder="email">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>password:</strong>
+                <strong>Password:</strong>
                 <input class="form-control" type="password" name="password" placeholder="password">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <div class="col-sm-2 lftbtn">
+            <a class="btn btn-primary back" href="{{ route('successlogin') }}"> Back</a>
+        </div>
+        <div class="col-sm-3  text-center rtnbtn">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
