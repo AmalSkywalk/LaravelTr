@@ -27,19 +27,25 @@
 			</div>
 		@endif
 
-		<form method="post" action="{{ url('/main/checklogin') }}">
+		<form name="loginform" id="loginform" method="post" action="{{ url('/main/checklogin') }}">
 			{{ csrf_field() }}
 			<div class="form-group">
 				<label><b>Enter Email</label>
-				<input type="email" name="email" class="form-control" placeholder="example@gmail.com" />
+				<input type="email" name="email" class="form-control" placeholder="example@gmail.com" required data-parsley-type="email" data-parsley-trigger="keyup" />
 			</div>
 			<div class="form-group">
 				<label>Enter Password</label>
-				<input type="password" name="password" class="form-control" placeholder="*************" />
+				<input type="password" name="password" class="form-control" placeholder="*************" required data-parsley-trigger="keyup"/>
 			</div>
-			<div class="form-group col-sm-2 ">
+			<div class="form-group ">
 				<input type="submit" name="login" class="btn btn-primary" value="Login" />
 			</div>
+
+			<script>
+       $(document).ready(function(){
+            $('#loginform').parsley();
+       });
+   </script>
 		</form>
 	
 @endsection

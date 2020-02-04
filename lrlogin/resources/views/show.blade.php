@@ -17,6 +17,7 @@
     </div>
    
     <div class="row">
+        <div class="col-sm-12">
         <table class="table table-bordered">
         <tr>
             <th>No</th>
@@ -37,13 +38,14 @@
                     @csrf
                     
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger ">Delete</button>
+                    <button type="submit" class="btn btn-danger rtnbtn">Delete</button>
                 </form>
             </td>
         </tr> 
      @endforeach
 
    </table>
+    </div>
    <div class="lftbtn" >
                 <a class="btn btn-primary " href="{{ route('successlogin') }}"> Back</a>
             </div>  

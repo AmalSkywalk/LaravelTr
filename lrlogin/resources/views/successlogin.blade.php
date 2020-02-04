@@ -20,11 +20,11 @@
 			
     	<div class="row">
 			
-          	<div class="col-sm-3 lftbtn">
+          	<div class=" lftbtn">
           	    <a class="btn btn-info" href="{{ route('show') }}">List Users</a>
 			</div>			
 			<br>
-			<div class="col-sm-3 rtnbtn">
+			<div class=" rtnbtn">
 				<a class="btn btn-danger" href="{{ url('/main/logout') }}">Logout</a>
 			</div>
 		</div>
